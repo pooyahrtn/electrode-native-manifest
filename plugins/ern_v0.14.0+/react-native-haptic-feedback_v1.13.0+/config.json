@@ -1,0 +1,31 @@
+{
+  "android": {
+    "root": "android",
+    "dependencies": []
+  },
+  "ios": {
+    "copy": [
+      {
+        "dest": "{{{projectName}}}/Libraries/RNReactNativeHapticFeedback",
+        "source": "ios/*"
+      }
+    ],
+    "pbxproj": {
+      "addHeaderSearchPath": [
+        "\"$(SRCROOT)/{{{projectName}}}/Libraries/RNReactNativeHapticFeedback/**\""
+      ],
+      "addProject": [
+        {
+          "group": "Libraries",
+          "path": "RNReactNativeHapticFeedback/RNReactNativeHapticFeedback.xcodeproj",
+          "staticLibs": [
+            {
+              "name": "libRNReactNativeHapticFeedback.a",
+              "target": "RNReactNativeHapticFeedback"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
