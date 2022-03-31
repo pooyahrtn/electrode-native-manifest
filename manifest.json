@@ -1497,6 +1497,7 @@
       "react-native-electrode-bridge@1.5.27-picnic",
       "react-native-exif@0.4.0",
       "react-native-fast-image@8.1.5",
+      "react-native-fast-image2@8.1.5",
       "react-native-fbsdk@1.1.2",
       "react-native-fs@2.16.6",
       "react-native-gesture-handler@1.6.1",
