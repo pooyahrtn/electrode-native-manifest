@@ -1,0 +1,48 @@
+{
+  "android": {
+    "root": "android",
+    "dependencies": [],
+    "copy": [
+      {
+        "dest": "lib/src/main/java/com/swmansion/gesturehandler",
+        "source": "android/lib/src/main/java/com/swmansion/gesturehandler/*"
+      },
+      {
+        "dest": "lib/src/main/java/com/swmansion/gesturehandler",
+        "source": "android/common/src/main/java/com/swmansion/common/*"
+      }
+    ],
+    "replaceInFile": [
+      {
+        "path": "lib/src/main/java/com/swmansion/gesturehandler/react/RNGestureHandlerButtonViewManager.kt",
+        "string": "R.attr.selectableItemBackground",
+        "replaceWith": "android.R.attr.selectableItemBackground"
+      }
+    ]
+  },
+  "ios": {
+    "copy": [
+      {
+        "dest": "{{{projectName}}}/Libraries/RNGestureHandler",
+        "source": "ios/**"
+      }
+    ],
+    "pbxproj": {
+      "addHeaderSearchPath": [
+        "\"$(SRCROOT)/{{{projectName}}}/Libraries/RNGestureHandler/**\""
+      ],
+      "addProject": [
+        {
+          "group": "Libraries",
+          "path": "RNGestureHandler/RNGestureHandler.xcodeproj",
+          "staticLibs": [
+            {
+              "name": "libRNGestureHandler.a",
+              "target": "RNGestureHandler"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
