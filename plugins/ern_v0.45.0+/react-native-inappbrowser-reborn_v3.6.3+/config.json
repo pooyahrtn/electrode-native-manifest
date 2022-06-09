@@ -5,6 +5,13 @@
       "implementation 'org.greenrobot:eventbus:3.+'",
       "implementation 'androidx.annotation:annotation:1.2.0'",
       "implementation 'androidx.browser:browser:1.3.0'"
+    ],
+    "replaceInFile": [
+      {
+        "path": "lib/src/main/AndroidManifest.xml",
+        "string": "<\/application>",
+        "replaceWith": "<activity \n android:name=\"com.proyecto26.inappbrowser.ChromeTabsManagerActivity\" android:exported=\"false\"/> \n  </application>"
+      }
     ]
   },
   "ios": {
