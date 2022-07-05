@@ -6,11 +6,11 @@ import android.support.annotation.Nullable;
 
 import com.facebook.react.ReactInstanceManagerBuilder;
 import com.facebook.react.ReactPackage;
-import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
+import com.shopify.reactnative.flash_list.FlashListPackage;
 
-public class RNGestureHandlerPackagePlugin implements ReactPlugin {
+public class FlashListPackagePlugin implements ReactPlugin {
     public ReactPackage hook(@NonNull Application application,
-            @Nullable ReactPluginConfig config) {
-        return new RNGestureHandlerPackage();
+           @Nullable ReactPluginConfig config) {
+        return new FlashListPackage();
     }
 }
